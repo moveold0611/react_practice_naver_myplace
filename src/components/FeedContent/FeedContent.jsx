@@ -7,6 +7,7 @@ import FeedImgContainer from "./FeedImgContainer/FeedImgContainer";
 import FeedTextContainer from "./FeedTextContainer/FeedTextContainer";
 import FeedTagContainer from "../FeedTagContainer/FeedTagContainer";
 import FeedSetCommentContainer from "./FeedSetCommentContainer/FeedSetCommentContainer";
+import FeedStoreInfoContainer from "./FeedStoreInfoContainer/FeedStoreInfoContainer";
 
 function FeedContent(props) {
     return (
@@ -17,15 +18,7 @@ function FeedContent(props) {
                 <FeedTextContainer />
                 <FeedTagContainer />
                 <FeedSetCommentContainer />
-                <div css={S.SFeedStoreInfoContainer}></div>
-            </div>
-            <div css={S.SContainer}>
-                <FeedUserInfoContainer />
-                <FeedImgContainer />
-                <FeedTextContainer />
-                <FeedTagContainer />
-                <FeedSetCommentContainer />
-                <div css={S.SFeedStoreInfoContainer}></div>
+                <FeedStoreInfoContainer />
             </div>
         </li>
     );

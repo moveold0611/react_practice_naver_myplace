@@ -24,7 +24,7 @@ export const SBtn = css`
     padding: 14px 5px;
     border: none;
     background-color: transparent;
-    color: white;
+    color: rgba(255,255,255,.7);
     font-size: 17px;
     cursor: pointer;
     text-decoration: none;
@@ -33,24 +33,29 @@ export const SBtn = css`
 
 
 export const STimeLineActive =(pathname)=> css`
-    font-weight: ${pathname ==="/timeline" ? "800" : "normal"};
-    border-bottom: ${pathname ==="/timeline" ? "3px solid white" : "none"};
+    font-weight: ${pathname.startsWith("/timeline") ? "800" : "normal"};
+    border-bottom: ${pathname.startsWith("/timeline") ? "3px solid white" : "none"};
+    color: ${pathname.startsWith("/timeline") ? "white" : "rgba(255,255,255,.7)"};
 `;
 export const SFeedActive =(pathname)=> css`
-    font-weight: ${pathname ==="/feed" ? "800" : "normal"};
-    border-bottom: ${pathname ==="/feed" ? "3px solid white" : "none"};
+    font-weight: ${pathname.startsWith("/feed") ? "800" : "normal"};
+    border-bottom: ${pathname.startsWith("/feed") ? "3px solid white" : "none"};
+    color: ${pathname.startsWith("/feed") ? "white" : "rgba(255,255,255,.7)"};
 `;
 export const SReviewActive =(pathname)=> css`
-    font-weight: ${pathname ==="/review" ? "800" : "normal"};
-    border-bottom: ${pathname ==="/review" ? "3px solid white" : "none"};
+    font-weight: ${pathname.startsWith("/review") ? "800" : "normal"};
+    border-bottom: ${pathname.startsWith("/review") ? "3px solid white" : "none"};
+    color: ${pathname.startsWith("/review") ? "white" : "rgba(255,255,255,.7)"};
 `;
 
 export const SOrderActive =(pathname)=> css`
-    font-weight: ${pathname ==="/order" ? "800" : "normal"};
-    border-bottom: ${pathname ==="/order" ? "3px solid white" : "none"};
+    font-weight: ${pathname.startsWith("/order") ? "800" : "normal"};
+    border-bottom: ${pathname.startsWith("/order") ? "3px solid white" : "none"};
+    color: ${pathname.startsWith("/order") ? "white" : "rgba(255,255,255,.7)"};
 `;
 
 export const SSaveActive =(pathname)=> css`
-    font-weight: ${pathname ==="/save" ? "800" : "normal"};
-    border-bottom: ${pathname ==="/save" ? "3px solid white" : "none"};
+    font-weight: ${pathname.startsWith("/save") ? "800" : "normal"};
+    border-bottom: ${pathname.startsWith("/save") ? "3px solid white" : "none"};
+    color: ${pathname.startsWith("/save") ? "white" : "rgba(255,255,255,.7)"};
 `;

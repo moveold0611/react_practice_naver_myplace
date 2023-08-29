@@ -1,14 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import * as S from "./Style"
 import React from 'react';
-import FeedContent from "../../components/FeedContent/FeedContent";
+import { Route, Routes } from "react-router-dom";
+import FollowedFeed from "../FollowedFeed/FollowedFeed";
+import AllFeed from "./AllFeed/AllFeed";
+
 
 function Feed(props) {
     return (
-        <div css={S.SLayout}>
-            <FeedContent />
-        </div>
+        <Routes>
+            <Route path="" element={<AllFeed/>} />
+            <Route path="/all" element={<AllFeed/>}/>
+            <Route path="/following" element={<FollowedFeed/>}/>
+        </Routes>
     );
 }
 
