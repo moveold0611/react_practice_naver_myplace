@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import * as S from "./Style"
 import React from 'react';
 import { AiOutlineRight } from "react-icons/ai"
+import img from '../../../assets/face_savoring_food20220119222022.png';
 
 function PageBanner(props) {
     return (
@@ -10,7 +11,7 @@ function PageBanner(props) {
             <div css={S.SContainer}>
                 <button css={S.SBtnBox}>
                     <div css={S.SBannerIconBox}>
-                        <img css={S.SBannerIcon} src="face_savoring_food20220119222022.png" />
+                        <img css={S.SBannerIcon} src={img} />
                     </div>
                     <div css={S.SBannerTextBox}>
                         <span css={S.SBannerTextTop}> 지금 로그인하고</span>

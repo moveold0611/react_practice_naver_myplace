@@ -5,6 +5,7 @@ import React from 'react';
 import { AiOutlineRight } from "react-icons/ai"
 import { BiSolidPencil } from "react-icons/bi"
 import { BsCheck2Circle } from "react-icons/bs"
+import img from '../../assets/icon_profile_default.cf1f777d594520630ff249eb31ab38c2.png';
 
 
 function HeaderMiddle(props) {
@@ -15,7 +16,7 @@ function HeaderMiddle(props) {
                         <div css={S.SProfileImgContainer}>
                             <div css={S.SImgOutLine}>
                                 <div css={S.SImgInLine}>
-                                    <img src="icon_profile_default.cf1f777d594520630ff249eb31ab38c2.png" css={S.SProfileImg}/>
+                                    <img src={img} css={S.SProfileImg}/>
                                 </div>
                             </div>
                         </div>

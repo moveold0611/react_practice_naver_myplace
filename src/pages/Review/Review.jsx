@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import * as S from "./Style"
 import React from 'react';
 import { IoMdFlag } from "react-icons/io";
+import img from '../../assets/panel_img_review_20221202.87ca2c0d90f42473c28ef6cff083836e.png';
 
 function Review(props) {
     return (
@@ -18,7 +19,7 @@ function Review(props) {
                 </div>
                 <div css={S.SSmallTextContainer}>나의 발자취를 소중한 기록으로 남겨보세요.</div>
                 <div css={S.SImgContainer}>
-                    <img css={S.SImg} src="panel_img_review_20221202.87ca2c0d90f42473c28ef6cff083836e.png"/>
+                    <img css={S.SImg} src={img}/>
                 </div>
                 <div css={S.SBtnContainer}>
                     <button css={S.SBtn}>리뷰 참여하기</button>

@@ -11,7 +11,8 @@ import Review from "./pages/Review/Review";
 import Feed from "./pages/Feed/Feed";
 import Order from "./pages/Order/Order";
 import Save from "./pages/Save/Save";
-import AllFeed from "./pages/Feed/AllFeed/AllFeed";
+import AllFeed from "./pages/AllFeed/AllFeed";
+import TestFeedData from "./TestFeedData/TestFeedData";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
 
         <Routes>
           <Route path="/timeline" element={<TimeLine />}/>
-          <Route path="/feed/*" element={<AllFeed />}/>
+          <Route path="/feed/*" element={<TestFeedData />}/>
           <Route path="/review" element={<Review />}/>
           <Route path="/order" element={<Order />}/>
           <Route path="/save" element={<Save />}/>

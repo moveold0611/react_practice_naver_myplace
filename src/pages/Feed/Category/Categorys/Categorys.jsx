@@ -3,6 +3,9 @@ import { css } from "@emotion/react";
 import * as S from "./Style"
 import React, { useState } from 'react';
 import { selectCategoryState } from "../../../../store/Store";
+import { useRecoilState } from "recoil";
+import { categorySelectState } from "../../../../store/Store";
+
 
 function Categorys(props) {
 
@@ -119,23 +122,27 @@ function Categorys(props) {
         },
     ]
 
-    const [ selectCategory, setSelectCategory ] = useState(selectCategoryState);
+    const [ selectCategory, setSelectCategory ] = useRecoilState(selectCategoryState);
+    const [ categorySelect, setCategorySelect ] = useRecoilState(categorySelectState);
+    
     const handleSelectCategory = (key) => {
         categorys.map(items => {
             if(items.key === key) {
-                setSelectCategory(selectCategory = items.key)
+                console.log(items.name)
+                setCategorySelect(items.name)
+                setSelectCategory(items.key)
             }
-
         })
     }
+
+
 
     return (
         <>
             {categorys.map(items => {
-                const isSelected = items.key;
                 return (
                     <span key={items.key} css={[S.SCategoryBtnBox, items.padding]}>
-                        <button onClick={()=>handleSelectCategory(items.key)} css={S.SCategoryBtn(isSelected===selectCategory)}>{items.name}</button>
+                        <button onClick={()=>handleSelectCategory(items.key)} css={S.SCategoryBtn(items.key===selectCategory)}>{items.name}</button>
                     </span>
                 );
             })}

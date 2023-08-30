@@ -4,6 +4,7 @@ import * as S from "./Style"
 import React from 'react';
 import { IoMdFlag } from "react-icons/io"
 import { useLocation } from "react-router-dom";
+import img from '../../assets/panel_img_visit_20221202.fd5a3f0bd6ca8dbf3bd9cc7c5f98b110.png';
 
 function TimeLine(props) {
     const location = useLocation();
@@ -20,7 +21,7 @@ function TimeLine(props) {
                 </div>
                 <div css={S.SSmallTextContainer}>방문했던 곳을 한 눈에 모아보세요.</div>
                 <div css={S.SImgContainer}>
-                    <img css={S.SImg} src="panel_img_visit_20221202.fd5a3f0bd6ca8dbf3bd9cc7c5f98b110.png"/>
+                    <img css={S.SImg} src={img}/>
                 </div>
                 <div css={S.SBtnContainer}>
                     <button css={S.SBtn}>리뷰 참여하기</button>

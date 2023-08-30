@@ -7,5 +7,16 @@ export const scrollCategoryState = atom({
 
 export const selectCategoryState = atom({
     key: "selectCategory",
-    default: false
+    default: 0
 })
+
+export const feedContentDataState = atom({
+    key: "feedContentData",
+    default: []
+}); 
+
+export const categorySelectState = atom({
+    key: "categorySelect",
+    default: "all"
+}); 
+

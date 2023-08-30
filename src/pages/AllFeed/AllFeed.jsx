@@ -1,13 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import * as S from "./Style"
-import FeedContent from "../../components/FeedContent/FeedContent";
+import React from 'react';
 import FollowNLocation from "../Feed/FollowNLocation/FollowNLocation";
 import Category from "../Feed/Category/Category";
+import FeedContent from "../../components/FeedContent/FeedContent";
 import PageBanner from "../Feed/PageBanner/PageBanner";
-import React from 'react';
 
-function FollowedFeed({ feedContentData }) {
+function AllFeed({ feedContentData}) {
+
+    
+
     return (
         <div css={S.SLayout}>
             <FollowNLocation/>
@@ -18,4 +21,4 @@ function FollowedFeed({ feedContentData }) {
     );
 }
 
-export default FollowedFeed;
+export default AllFeed;

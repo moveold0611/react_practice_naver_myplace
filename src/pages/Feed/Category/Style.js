@@ -23,14 +23,14 @@ export const SCategoryContainer = css`
     width: 720px;
 `;
 
-export const SCategoryFanContainer = css`
+export const SCategoryPanContainer = css`
     position: relative;
     width: 100%;
     height: 100%;
     white-space: nowrap;
 `;
 
-export const SCategoryFanBox = css`
+export const SCategoryPanBox = css`
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -38,8 +38,9 @@ export const SCategoryFanBox = css`
     user-select: none;
 `;
 
-export const SCategoryBtnContainer = (LeftRight) => css`
-    transform: translate(${LeftRight ? "-720px" : "0px"});
+export const SCategoryBtnContainer = (num) => css`
+    touch-action: pan-x;
+    transform: translate(${num});
     transition: 0.5s ease;
     position: relative;
     display: flex;
@@ -52,7 +53,7 @@ export const SCategoryBtnContainer = (LeftRight) => css`
     z-index: 1;
 `;
 
-export const SCategoryMoveFanBtnBox = (pos) => css`
+export const SCategoryMovePanBtnBox = (pos) => css`
     ${pos}: 2px;
     position: absolute;
     padding: 0%;
@@ -104,7 +105,7 @@ export const SCategoryBtn = css`
     cursor: pointer;
 `;
 
-export const SCategoryMoveFanBtn = css`
+export const SCategoryMovePanBtn = css`
     width: 15px;
     height: 15px;
     color: rgb(102,102,102);
